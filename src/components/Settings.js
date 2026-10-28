@@ -51,7 +51,7 @@ class SettingsForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser) {
-      this.setState(Object.assign({}, this.state, {
+      this.setState(estadoPrevio => Object.assign({}, estadoPrevio, {
         image: nextProps.currentUser.image || '',
         username: nextProps.currentUser.username,
         bio: nextProps.currentUser.bio,
